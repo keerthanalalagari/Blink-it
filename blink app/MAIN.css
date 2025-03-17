@@ -1,0 +1,546 @@
+*{
+    margin: 0.3rem;
+    padding: 0;
+}
+nav{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    
+}
+#name a{
+  font-size: 3rem;
+  font-weight:bolder;
+  text-decoration: none;
+  color: rgb(226, 226, 23);
+}
+#location{
+
+}
+.h{
+    font-size: 25px;
+    font-weight:bolder;
+}
+.location{
+    text-decoration: none;
+}
+#input{
+padding: 15px;
+width: 470px;
+border-radius: 10px;
+border:none; 
+ background-color: rgb(245, 244, 244);
+}
+#search i{
+    margin-right: 30px;
+    position: absolute;
+    left: 550px;
+    top: 28px;
+}
+#main-cart{
+  
+  transform: translate(-50%,50%);
+  text-align: center;
+  margin-bottom: 30px;
+  
+}
+#main-cart button{
+  width: 110px;
+  height: 30px;
+  position: absolute;
+  right:10px;
+  bottom: -1px;
+}
+
+.main-cart{
+  background: white;
+  padding: 2px;
+    width:40px;
+    height: 20px;
+  color: white;
+  background-color: green;
+  text-transform: uppercase;
+  font-size: 15px;
+  border-radius: 5px;
+  box-shadow: 6px 6px 29px -4px rbga(0,0,0,0.75);
+  position: absolute;
+  right:80px;
+  text-decoration: none;
+  transition: 0.4s;
+}
+.popup1{
+  background: rgba(0,0,0,0.6);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+.popup1-content{
+  width: 350px;
+  height: 100%;
+  background: rgb(238, 235, 235);
+  position: absolute;
+  right: 15px;
+  margin-top: 2px;
+  
+}
+.close{
+  position: absolute;
+  right: 11px;
+  font-size: 35px;
+  top: 20px;
+  cursor: pointer;
+}
+#head{
+  background-color: white;
+  padding: 9px;
+  width: 93%;
+  
+}
+.added-list{
+  margin-top: 10px;
+  width: 25%;
+  height: 70%;
+  background-color: white;
+  position: absolute;
+  left: 73%;
+}
+.added-list img{
+  position: absolute;
+  right: 80px;
+  top: 40px;
+}
+.added-list h2{
+  position: absolute;
+  right: 10px;
+  top: 220px;
+  font-size: 19px;
+}
+.added-list span{
+  position: absolute;
+  right: 40px;
+  top: 260px;
+  font-size: 15px;
+}
+#shopping{
+  position: absolute;
+  top: 300px;
+  right: 100px;
+  padding: 10px;
+  border-radius: 5px;
+  background: green;
+  color: white;
+  cursor: pointer;
+}
+#cart button:hover{
+    cursor: pointer;
+}
+#icon:hover{
+ cursor: pointer;
+ color: yellow;
+}
+.container{
+  /* position:absolute;
+  top: 20%;
+  left: 50%; */
+  transform: translate(-50%,50%);
+  text-align: center;
+  margin-bottom: 30px;
+  margin-left: 30px;
+}
+
+.button{
+  background: white;
+  padding: 10px 15px;
+  color: #34495e;
+  font-weight: bolder;
+  text-transform: uppercase;
+  font-size: 18px;
+  border-radius: 5px;
+  box-shadow: 6px 6px 29px -4px rbga(0,0,0,0.75);
+  margin-top: 25px;
+  text-decoration: none;
+  transition: 0.4s;
+}
+.popup{
+  background: rgba(0,0,0,0.6);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content{
+      margin-top: 3%;
+      background-color: white;
+      box-shadow: 1px 1px 2px 2px gainsboro;
+      width: 150%;
+     height: 340px;
+     padding-top: 20px;
+     border-radius: 15px;
+     position: relative; 
+    right: 20%;
+    }  
+     .popup-content input{
+      padding: 10px;
+      width: 40%;
+      border-radius: 10px;
+      
+      
+    }
+    .popup-content button{
+      padding: 10px;
+      width: 40%;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+    #back{
+      float: left;
+      position: absolute;
+      left: 5%;
+      top: 5%;
+      cursor: pointer;
+        }
+   
+section{
+    margin-top: 20px;
+    width: 95%;
+    height: 270px;
+    background-image: url("https://static.vecteezy.com/system/resources/previews/003/339/998/original/delivery-service-woman-receiving-parcel-from-courier-on-doorstep-vector.jpg");
+  background-size: cover;
+   background-position:center ;
+   background-repeat: no-repeat;
+   border-radius: 10px;
+    
+}
+aside{
+display: grid;
+grid-template-columns: auto auto auto;
+width: 95%;
+margin-top: 20px;
+}
+#pharmacy{
+background-image: url("https://smhospital.org.in/wp-content/uploads/2022/12/Pharmacy-S_M_-Hospital-1.webp");
+background-size: cover;
+width: 350px;
+height: 200px;
+text-align: start;
+padding: 20px;
+
+border-radius: 8px;
+}
+.pharmacy{
+    margin-top: 20px;
+    padding: 8px;
+    width: 100px;
+    border-radius: 5px;
+    border: none;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: black;
+    color: white;
+}
+.pharmacy:hover{
+    cursor: pointer;
+}
+#petcare{
+    background-image: url("https://s2.dmcdn.net/v/Nz1dJ1RFH8WmLZxQK/x720");
+    background-size: cover;
+width: 350px;
+height: 200px;
+text-align: start;
+padding: 20px;
+border-radius: 8px;
+}
+.petcare{
+    margin-top: 20px;
+    padding: 8px;
+    width: 100px;
+    border-radius: 5px;
+    border: none;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: black;
+    color: white;
+}
+.petcare:hover{
+    cursor: pointer;
+}
+#childcare{
+background-image: url("https://www.innovationintextiles.com/uploads/13169/PFNonwovens-618x408-boxed.jpg");
+background-size: cover;
+width: 350px;
+height: 200px;
+text-align: start;
+padding: 20px;
+border-radius: 8px;
+}
+.childcare{
+    margin-top: 20px;
+    padding: 8px;
+    width: 100px;
+    border-radius: 5px;
+    border: none;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: black;
+    color: white;
+}
+.childcare:hover{
+    cursor: pointer;
+}
+
+/* category */
+#section1 a{
+      
+  text-decoration: none;
+}
+#section2 a{
+      
+  text-decoration: none;
+}
+.list h4{
+  cursor: default;
+  color: black;
+  font-weight: bold;
+}
+ #lists{
+display: flex;
+flex-basis: 22% 22% 22% 22% 22% 22% 22% 22% 22% 22%  ;
+
+    }
+    .list{
+      
+      /* box-shadow:0 5px 11px 0 rgba(0, 0,0,.1), 0 4px 11px 0 rgba(0, 0, 0, .08) ; */
+      margin: auto;
+      width: 10%;
+      height: 10%;
+      text-align: center;
+    }
+    .list img{
+      background: rgb(236, 236, 236);
+      border-radius: 5px;
+    }
+    #head{
+        margin-top: 20px;
+      display: grid;
+      grid-template-columns:92% 10%  ;
+     }
+     #head h1{
+        margin-left: 20px;
+        
+     }
+      #head h2:hover{
+      cursor: pointer;
+      text-decoration: underline;
+      }
+     .item{
+      display: grid;
+    grid-template-columns: auto;
+      /* justify-content: space-around; */
+      margin: 10px;
+      width:300px;
+      height: 300px;
+      background-color:white;
+      text-align: center;
+       box-shadow:1px 1px 1px 1px rgb(167, 164, 164);
+       border-radius: 3px;
+     }
+     #image{
+     margin-left: 60px;
+     }
+     .scroll-container {
+    display: flex;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-padding: 60px;
+    width: 100%;
+    height: 100vh;  
+  }
+ 
+#head1{
+    display: grid;
+    grid-template-columns:92% 10%  ;
+   }
+   #head1 h1{
+    margin-left: 20px;
+ }
+    #head1 h2:hover{
+    cursor: pointer;
+    text-decoration: underline;
+    }
+   .item1{
+    display: grid;
+  grid-template-columns: auto;
+    /* justify-content: space-around; */
+    margin: 10px;
+    width:300px;
+    height: 300px;
+    background-color:white;
+    text-align: center;
+     box-shadow:1px 1px 1px 1px rgb(167, 164, 164);
+     border-radius: 3px;
+     
+   }
+   .scroll-container {
+  display: flex;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  scroll-padding: 60px;
+  width: 100%;
+  height: 60vh;  
+}
+
+#head2{
+    display: grid;
+    grid-template-columns:92% 10%  ;
+   }
+   #head2 h1{
+  margin-left: 20px;
+}
+    #head2 h2:hover{
+    cursor: pointer;
+    text-decoration: underline;
+    }
+   .item2{
+    display: grid;
+  grid-template-columns: auto;
+    /* justify-content: space-around; */
+    margin: 10px;
+    width:300px;
+    height: 300px;
+    background-color:white;
+    text-align: center;
+     box-shadow:1px 1px 1px 1px rgb(167, 164, 164);
+     border-radius: 3px;
+     
+   }
+   .scroll-container {
+  display: flex;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  scroll-padding: 60px;
+  width: 100%;
+
+}
+
+
+#head3{
+    display: grid;
+    grid-template-columns:92% 10%  ;
+   }
+   #head3 h1{
+  margin-left: 20px;
+}
+    #head3 h2:hover{
+    cursor: pointer;
+    text-decoration: underline;
+    }
+   .item3{
+    display: grid;
+  grid-template-columns: auto ;
+    margin: 10px;
+    width:300px;
+    height: 300px;
+    background-color:white;
+    text-align: center;
+     box-shadow:1px 1px 1px 1px rgb(167, 164, 164);
+     border-radius: 3px;
+     
+   }
+   .scroll-container {
+  display: flex;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  scroll-padding: 60px;
+  width: 100%;
+  height: 40%;  
+
+}
+::-webkit-scrollbar {
+  display: none;
+}
+
+
+/* end */
+footer{
+    margin: 30px;
+  }
+ #usefullinks{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  width: 30%;
+ }
+ .link a{
+  text-decoration: none;
+  font-size: 18px;
+  margin: 20px;
+  color: gray;
+ }
+ #category{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  width: 60%;
+  position: absolute;
+  left: 36%;
+  top: 435%;
+ }
+ .categorylist{
+  position: absolute;
+  left: 32%;
+ top: 429%;
+ }
+
+
+ /* add to cart */
+ .cart button{
+  width: 30px;
+  height: 30px;
+  margin-top: 10px;
+  margin-left: 13px;
+  color: green;
+  border: 1px solid green;
+  background: rgb(192, 236, 192);
+}
+.cart{
+display: grid;
+grid-template-columns: auto auto;
+width:300px;
+      height: 200px; 
+ }
+ .cart p{
+  margin-top: 10px;
+ }
+ .btn{
+    width: 80px;
+    height: 40px;
+    border-radius: 4px;
+    text-size-adjust: 5px;
+    background:rgb(192, 236, 192);
+
+ }
+ .btn button{
+    border: none;
+    cursor: pointer;
+    outline: none;
+    font-size: 1rem;
+    background: rgb(192, 236, 192);
+    
+    
+ }
+ #minusBtn ,#plusBtn{
+    display: none;
+    cursor: pointer;
+    width: 1px;
+    padding: px;
+    margin-left: 5px;
+
+ }
+
+   

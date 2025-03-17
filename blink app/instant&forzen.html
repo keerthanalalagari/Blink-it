@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instant & Frozen</title>
+    <link rel="icon" href="truck-solid.svg" type="image/x-icon" >
+    <script src="https://kit.fontawesome.com/7a454927e2.js" crossorigin="anonymous"></script>
+   
+   <style>
+     *{
+    margin: 0.3rem;
+    padding: 0;
+}
+nav{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    
+}
+#name a{
+    font-size: 3rem;
+    font-weight:bolder;
+    text-decoration: none;
+    color: rgb(226, 226, 23);
+}
+#location{
+
+}
+.h{
+    font-size: 25px;
+    font-weight:bolder;
+}
+.location{
+    text-decoration: none;
+}
+#input{
+padding: 15px;
+width: 470px;
+border-radius: 10px;
+border:none; 
+ background-color: rgb(245, 244, 244);
+}
+#search i{
+    margin-right: 30px;
+    position: absolute;
+    left: 550px;
+    top: 28px;
+}
+#main-cart{
+  
+  transform: translate(-50%,50%);
+  text-align: center;
+  margin-bottom: 30px;
+  
+}
+#main-cart button{
+  width: 110px;
+  height: 30px;
+  position: absolute;
+  right:10px;
+  bottom: -1px;
+}
+
+.main-cart{
+  background: white;
+  padding: 2px;
+    width:40px;
+    height: 20px;
+  color: white;
+  background-color: green;
+  text-transform: uppercase;
+  font-size: 15px;
+  border-radius: 5px;
+  box-shadow: 6px 6px 29px -4px rbga(0,0,0,0.75);
+  position: absolute;
+  right:80px;
+  text-decoration: none;
+  transition: 0.4s;
+}
+.popup1{
+  background: rgba(0,0,0,0.6);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+.popup1-content{
+  width: 350px;
+  height: 95%;
+  background: rgb(238, 235, 235);
+  position: absolute;
+  right: 15px;
+}
+.close{
+  position: absolute;
+  right: 11px;
+  font-size: 35px;
+  top: 8px;
+  cursor: pointer;
+}
+#head{
+  background-color: white;
+  padding: 9px;
+  width: 93%;
+}
+.added-list{
+  width: 25%;
+  height: 70%;
+  background-color: white;
+  position: absolute;
+  left: 73%;
+}
+.added-list img{
+  position: absolute;
+  right: 80px;
+  top: 40px;
+}
+.added-list h2{
+  position: absolute;
+  right: 10px;
+  top: 220px;
+  font-size: 19px;
+}
+.added-list span{
+  position: absolute;
+  right: 40px;
+  top: 260px;
+  font-size: 15px;
+}
+#shopping{
+  position: absolute;
+  top: 300px;
+  right: 100px;
+  padding: 10px;
+  border-radius: 5px;
+  background: green;
+  color: white;
+  cursor: pointer;
+}
+#cart button:hover{
+    cursor: pointer;
+}
+#icon:hover{
+ cursor: pointer;
+ color: yellow;
+}
+.container{
+  /* position:absolute;
+  top: 20%;
+  left: 50%; */
+  transform: translate(-50%,50%);
+  text-align: center;
+  margin-bottom: 30px;
+  margin-left: 30px;
+}
+
+.button{
+  background: white;
+  padding: 10px 15px;
+  color: #34495e;
+  font-weight: bolder;
+  text-transform: uppercase;
+  font-size: 18px;
+  border-radius: 5px;
+  box-shadow: 6px 6px 29px -4px rbga(0,0,0,0.75);
+  margin-top: 25px;
+  text-decoration: none;
+  transition: 0.4s;
+}
+.popup{
+  background: rgba(0,0,0,0.6);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content{
+      margin-top: 3%;
+      background-color: white;
+      box-shadow: 1px 1px 2px 2px gainsboro;
+      width: 150%;
+     height: 340px;
+     padding-top: 20px;
+     border-radius: 15px;
+     position: relative; 
+    right: 20%;
+    }  
+     .popup-content input{
+      padding: 10px;
+      width: 40%;
+      border-radius: 10px;
+      
+      
+    }
+    .popup-content button{
+      padding: 10px;
+      width: 40%;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+    #back{
+      float: left;
+      position: absolute;
+      left: 5%;
+      top: 5%;
+      cursor: pointer;
+        }
+            /* nav1 */
+       .nav1{
+        width: 100%;
+        background: white;
+        height: 50px;
+        box-shadow:1px 1px 1px 1px rgb(202, 200, 200);
+        display: grid;
+        grid-template-columns: auto auto auto auto auto auto auto auto;
+        text-align: center;
+       }
+       .nav1 a{
+       margin-top: 15px;   
+       text-decoration: none;  
+       color: rgb(148, 142, 142);
+       }
+       .nav1 a:hover{
+        cursor: pointer;
+        text-decoration:underline;
+        font-size: 20px;
+       }
+
+       
+      /* aside-list */
+      aside{
+        background:white;
+        box-shadow:1px 1px 1px 1px rgb(202, 200, 200);
+        width: 250px;
+        height: 100%;
+        margin: 10px;
+        cursor: pointer;
+       }
+
+       .noodles:hover{
+        background: rgb(201, 241, 245);
+        border-left:3px solid green
+
+      }
+      .frozen-veg:hover{
+        background: rgb(201, 241, 245);
+        border-left:3px solid green
+      }
+      .frozen-nonveg:hover{
+        background: rgb(201, 241, 245);
+        border-left:3px solid green
+      }
+      .pasta:hover{
+        background: rgb(201, 241, 245);
+        border-left:3px solid green
+      }
+      .instant-mixes:hover{
+        background: rgb(201, 241, 245);
+        border-left:3px solid green
+      }
+      .energy-bar:hover{
+        background: rgb(201, 241, 245);
+        border-left:3px solid green
+      }
+       
+      .soup:hover{
+        background: rgb(201, 241, 245);
+        border-left:3px solid green
+      }
+      .veg:hover{
+        background: rgb(201, 241, 245);
+        border-left:3px solid green
+      }
+      .ready-to:hover{
+        background: rgb(201, 241, 245);
+        border-left:3px solid green
+      }
+      .dessert:hover{
+        background: rgb(201, 241, 245);
+        border-left:3px solid green
+      }
+      .herbs:hover{
+        background: rgb(201, 241, 245);
+        border-left:3px solid green
+      }
+      .batter:hover{
+        background: rgb(201, 241, 245);
+        border-left:3px solid green
+      }
+      .plant:hover{
+        background: rgb(201, 241, 245);
+        border-left:3px solid green
+      }
+      .imported:hover{
+        background: rgb(201, 241, 245);
+        border-left:3px solid green
+      }
+     
+       /* fresh vegitables */
+       .noodles{
+         display: grid;
+         grid-template-columns: auto auto;
+         width: 245px;
+         height: 60px;
+       }
+       .noodles a{
+        text-align: center;
+        position: absolute;
+        left: 100px;
+        top: 160px;
+        font-size: 20px;
+        text-decoration: none;
+        color: black;
+       }
+
+       .frozen-veg{
+         display: grid;
+         grid-template-columns: auto auto;
+         width: 245px;
+         height: 60px;
+       }
+       .frozen-veg a{
+        text-align: center;
+        position: absolute;
+        left: 99px;
+        top: 230px;
+        font-size: 20px;
+        text-decoration: none;
+        color: black;
+       }
+
+       .frozen-nonveg{
+         display: grid;
+         grid-template-columns: auto auto;
+         width: 245px;
+         height: 60px;
+       }
+       .frozen-nonveg a{
+        text-align: center;
+        position: absolute;
+        left: 70px;
+        top: 305px;
+        font-size: 19px;
+        text-decoration: none;
+        color: black;
+       }
+
+       .pasta{
+         display: grid;
+         grid-template-columns: auto auto;
+         width: 245px;
+         height: 60px;
+       }
+       .pasta a{
+        text-align: center;
+        position: absolute;
+        left: 100px;
+        top: 380px;
+        font-size: 19px;
+        text-decoration: none;
+        color: black;
+       }
+
+       .instant-mixes {
+         display: grid;
+         grid-template-columns: auto auto;
+         width: 245px;
+         height: 60px;
+       }
+       .instant-mixes a{
+        text-align: center;
+        position: absolute;
+        left: 100px;
+        top: 450px;
+        font-size: 19px;
+        text-decoration: none;
+        color: black;
+       }
+
+       .energy-bar{
+         display: grid;
+         grid-template-columns: auto auto;
+         width: 245px;
+         height: 60px;
+       }
+       .energy-bar a{
+        text-align: center;
+        position: absolute;
+        left: 90px;
+        top: 515px;
+        font-size: 19px;
+        text-decoration: none;
+        color: black;
+       }
+
+       .soup{
+         display: grid;
+         grid-template-columns: auto auto;
+         width: 245px;
+         height: 60px;
+       }
+       .soup a{
+        text-align: center;
+        position: absolute;
+        left: 110px;
+        top: 590px;
+        font-size: 19px;
+        text-decoration: none;
+        color: black;
+       }
+
+       .veg{
+         display: grid;
+         grid-template-columns: auto auto;
+         width: 245px;
+         height: 60px;
+       }
+       .veg a{
+        text-align: center;
+        position: absolute;
+        left: 90px;
+        top: 665px;
+        font-size: 19px;
+        text-decoration: none;
+        color: black;
+       }
+
+       .ready-to{
+         display: grid;
+         grid-template-columns: auto auto;
+         width: 245px;
+         height: 60px;
+       }
+       .ready-to a{
+        text-align: center;
+        position: absolute;
+        left: 90px;
+        top: 739px;
+        font-size: 19px;
+        text-decoration: none;
+        color: black;
+       }
+       .dessert{
+         display: grid;
+         grid-template-columns: auto auto;
+         width: 245px;
+         height: 60px;
+       }
+       .dessert a{
+        text-align: center;
+        position: absolute;
+        left: 90px;
+        top: 805px;
+        font-size: 19px;
+        text-decoration: none;
+        color: black;
+       }
+
+       .herbs{
+         display: grid;
+         grid-template-columns: auto auto;
+         width: 245px;
+         height: 60px;
+       }
+       .herbs a{
+        text-align: center;
+        position: absolute;
+        left: 85px;
+        top: 880px;
+        font-size: 19px;
+        text-decoration: none;
+        color: black;
+       }
+
+       
+       .batter{
+         display: grid;
+         grid-template-columns: auto auto;
+         width: 245px;
+         height: 60px;
+       }
+       .batter a{
+        text-align: center;
+        position: absolute;
+        left: 100px;
+        top: 945px;
+        font-size: 19px;
+        text-decoration: none;
+        color: black;
+       }
+       .plant{
+         display: grid;
+         grid-template-columns: auto auto;
+         width: 245px;
+         height: 60px;
+       }
+       .plant a{
+        text-align: center;
+        position: absolute;
+        left: 90px;
+        top: 1020px;
+        font-size: 19px;
+        text-decoration: none;
+        color: black;
+       }
+       .imported{
+         display: grid;
+         grid-template-columns: auto auto;
+         width: 245px;
+         height: 60px;
+       }
+       .imported a{
+        text-align: center;
+        position: absolute;
+        left: 70px;
+        top: 1095px;
+        font-size: 18px;
+        text-decoration: none;
+        color: black;
+       }
+
+    </style>
+</head>
+<body>
+    <nav>
+      <div id="name">
+        <a href="MAIN.html">blink<mark style="color: rgb(21, 136, 21);background-color: white;">it</mark></a>
+       </div>
+        <div id="location">
+         <span class="h">Delivery in 12 minutes</span><br>
+         <input type="location" placeholder="location box" class="location"><i class="fa-solid fa-caret-down"></i>
+        </div>
+        <div id="search">
+        <input type="search" id="input">
+         <i class="fa-solid fa-magnifying-glass"></i> 
+         
+        </div>
+        <div class="container">
+         <a href="#" class="button">login</a>
+        </div>
+        <div id="main-cart">
+          <button href="#" class="main-cart" ><i class="fa-solid fa-cart-shopping" id="icon"></i>Mycart</button>
+        </div>
+     </nav>
+     <hr>
+     <div class="popup1">
+     
+       <div class="popup1-content">
+          <div id="head">
+           <p style="font-size: 25px; font-weight: bold;">My Cart</p>
+           <div   class="close">&times;</div>
+          </div>
+       </div>
+ 
+       <div class="added-list">
+       <img src="https://cdn.grofers.com/assets/ui/empty_states/emp_empty_cart.png" width="170px" height="170px">
+       <h2>You don't have any items in your cart</h2>
+       <span>Your favourite items are just click away</span>
+       <button id="shopping">Start shopping</button>
+       </div>
+ 
+     </div>
+     <div class="popup">
+       <center>
+       <div class="popup-content">
+         <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAMNJREFUSEvtlDEKwkAQRV8OIWiv4BlE8BaCteB1xFrwMArewcZe8BD6wYUtss5Mku2SMizv/fnZSUPlp6nMZxSYDUcqmgI74GhSswNegeBXYAEcgLNX4hEIfgPmwBNYAa+hBDn8AWwicIX4N8EEuP+SC74G3t7k6VxJILg6X34/bGd4aYIcHgncGrbtZXWBUletKNUyiMTag943yRJoml674BEkSfpV7IGL93p5BeLNgC1w8sKtTY5wimcjE3QSjgKztg/ExiAZuzHo1gAAAABJRU5ErkJggg==" id="back">
+       <img src="https://cdn.grofers.com/layout-engine/2023-11/app_logo.svg" alt="">
+       <h1>India's last minute app <br> log in or sing up</h1> <br>
+       <input type="number" name="number" id="number" placeholder="Enter mobile number" ><br>
+       <span id="data"></span> <br> 
+       <button id="continue">Continue</button> <br> <br>
+       <p>By continuing, you agree to our <a href="">Terms of service</a> &  <a href="">Privacy policy</a> </p>
+       </div>
+     </center>
+     </div>
+    </div>
+    <div class="nav1">
+      <a href="vegetables&fruits.html">Vegitables & Fruits</a>
+      <a href="dairy&breakfast.html">Dairy & Breakfast</a>
+      <a href="snacks&munchies.html">Munchies</a>
+      <a href="colddrinks&juices.html">Cold Drinks & Juices</a>
+      <a href="instant&forzen.html">Instant & Frozen Food</a>
+      <a href="tea&coffee.html">Tea,Coffee & Health Drinks</a>
+      <a href="">More</a>
+  </div>
+
+  <aside>
+    <div class="noodles">
+        <img src="https://cdn.grofers.com/app/images/category/cms_images/icon/962_1643384795557.png" width="50px" height="80px">
+        <a href="">Noodles</a>
+    </div>
+    <hr>
+    <div class="frozen-veg">
+        <img src="https://cdn.grofers.com/app/images/category/cms_images/icon/1413_1643385202902.png" width="50px" height="80px">
+        <a href="">frozen-veg Snacks</a>
+    </div>
+    <hr>
+    <div class="frozen-nonveg">
+        <img src="https://cdn.grofers.com/app/images/category/cms_images/icon/1412_1643385216342.png" width="50px" height="80px">
+        <a href="">Frozen Non-Veg Snacks</a>
+    </div>
+    <hr>
+    <div class="pasta">
+        <img src="https://cdn.grofers.com/app/images/category/cms_images/icon/968_1669884568341.png" width="50px" height="60px">
+        <a href="">Pasta</a>
+    </div>
+    <hr>
+    <div class="instant-mixes">
+        <img src="https://cdn.grofers.com/app/images/category/cms_images/icon/965_1669884524375.png" width="50px" height="80px">
+        <a href="">Instant Mixes</a>
+    </div>
+    <hr>
+    <div class="energy-bar">
+        <img src="https://cdn.grofers.com/app/images/category/cms_images/rc-upload-1700735371138-2" width="50px" height="60px">
+        <a href="">Energy Bars</a>
+    </div>
+    <hr>
+    <div class="soup">
+        <img src="https://cdn.grofers.com/app/images/category/cms_images/icon/964_1656662125900.png" width="50px" height="80px">
+        <a href="">Soup</a>
+    </div>
+    <hr>
+    <div class="veg">
+        <img src="https://cdn.grofers.com/app/images/category/cms_images/icon/157_1643443974388.png" width="50px" height="90px">
+        <a href="">Frozen Veg</a>
+    </div>
+    <hr>
+    <div class="ready-to">
+        <img src="https://cdn.grofers.com/app/images/category/cms_images/icon/1294_1669884460269.png" width="50px" height="80px">
+        <a href="">Ready to Cook & Eat</a>
+    </div>
+    <hr>
+    <div class="dessert">
+        <img src="https://cdn.grofers.com/app/images/category/cms_images/icon/970_1683113586178.png" width="50px" height="80px">
+        <a href="">Dessert & Cake Mixes</a>
+    </div>
+    <hr>
+    <div class="herbs">
+        <img src="https://cdn.grofers.com/app/images/category/cms_images/icon/1968_1643446137546.png" width="50px" height="70px">
+        <a href="">Herbs & Seasoning</a>
+    </div>
+    <hr>
+    <div class="batter">
+        <img src="https://cdn.grofers.com/app/images/category/cms_images/icon/1425_1643613254262.png" width="50px" height="70px">
+        <a href="">Batter</a>
+    </div>
+    <hr>
+    <div class="plant">
+        <img src="https://cdn.grofers.com/app/images/category/cms_images/icon/1127_1647237123605.png" width="50px" height="80px">
+        <a href="">Plant Based Meat</a>
+    </div>
+    <hr>
+    <div class="imported">
+        <img src="https://cdn.grofers.com/app/images/category/cms_images/icon/2361_1696422809429.png" width="50px" height="70px">
+        <a href="">Imported Noodles & Pasta</a>
+    </div>
+  </aside>
+
+    <script>
+        /////LOGIN FORM
+
+        document.querySelector(".button").addEventListener("click",()=>{
+                document.querySelector(".popup").style.display="flex";
+              })
+        
+              document.querySelector("#back").addEventListener("click",()=>{
+                   document.querySelector(".popup").style.display='none'
+              })
+        
+        
+        
+        let a=document.getElementById("number")
+             let b=document.getElementById("number")
+             let c=document.getElementById("data")
+             
+             a.addEventListener("keyup",()=>{
+            
+             let z=/^[0-9]{10,10}$/
+             let y=b.value
+             if(z.test(y)){
+              
+              c.textContent="number is vaild...!"
+             c.style.color="green"
+             }else{
+               
+              c.textContent="number is invaild...!"
+             c.style.color="red"
+             }
+             })
+             let z=document.getElementById("continue")
+         
+              z.addEventListener("click",()=>{
+              alert("validating")
+             })
+
+
+             //ADD TO CART
+             document.querySelector(".main-cart").addEventListener("click",()=>{
+                document.querySelector(".popup1").style.display="flex";
+              })
+        
+              document.querySelector(".close").addEventListener("click",()=>{
+                   document.querySelector(".popup1").style.display='none'
+              })
+        
+              document.querySelector("#shopping").addEventListener("click",()=>{
+                   document.querySelector(".popup1").style.display='none'
+              })
+    </script>
+</body>
+</html>
